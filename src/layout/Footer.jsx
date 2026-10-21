@@ -13,7 +13,7 @@ export default function Footer() {
             <h2>Questions, bugs, or just want to say hi?</h2>
             <p>
               The community space isn’t open yet — the Discord room hasn’t been created. When it is, the link
-              will live right here. Until then, you can reach out directly.
+              will live right here.
             </p>
           </div>
           <div className="footer__buttons">

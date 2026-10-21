@@ -1,6 +1,7 @@
 import Reveal from '../../components/Reveal.jsx';
 import Icon from '../../components/Icon.jsx';
-import ArtPlaceholder from '../../components/ArtPlaceholder.jsx';
+import MediaSlot from '../../components/MediaSlot.jsx';
+import { media } from '../../media.js';
 import './hero.css';
 
 export default function Hero() {
@@ -23,18 +24,22 @@ export default function Hero() {
 
         <div className="hero__products">
           <Reveal as="a" href="#studio" className="product-card product-card--studio" delay={100}>
-            <div className="product-card__visual" aria-hidden="true">
-              <div className="mini-chat">
-                <span className="mini-chat__bubble mini-chat__bubble--a">
-                  <i /> <b />
-                </span>
-                <span className="mini-chat__bubble mini-chat__bubble--b">
-                  <i /> <b />
-                </span>
-                <span className="mini-chat__bubble mini-chat__bubble--c">
-                  <i /> <b />
-                </span>
-              </div>
+            <div className="product-card__visual">
+              {media.heroStudio?.src ? (
+                <MediaSlot slot="heroStudio" frame="plain" ratio="auto" className="product-card__media" />
+              ) : (
+                <div className="mini-chat" aria-hidden="true">
+                  <span className="mini-chat__bubble mini-chat__bubble--a">
+                    <i /> <b />
+                  </span>
+                  <span className="mini-chat__bubble mini-chat__bubble--b">
+                    <i /> <b />
+                  </span>
+                  <span className="mini-chat__bubble mini-chat__bubble--c">
+                    <i /> <b />
+                  </span>
+                </div>
+              )}
             </div>
             <div className="product-card__body">
               <span className="badge">Playground · Ollama</span>
@@ -50,18 +55,22 @@ export default function Hero() {
           </Reveal>
 
           <Reveal as="a" href="#novel" className="product-card product-card--novel" delay={220}>
-            <div className="product-card__visual" aria-hidden="true">
-              <div className="mini-fan">
-                <ArtPlaceholder hue={300} variant={0} className="mini-fan__card mini-fan__card--1" />
-                <ArtPlaceholder hue={265} variant={1} className="mini-fan__card mini-fan__card--2" />
-                <ArtPlaceholder hue={330} variant={2} className="mini-fan__card mini-fan__card--3" />
-              </div>
+            <div className="product-card__visual">
+              {media.heroNovel?.src ? (
+                <MediaSlot slot="heroNovel" frame="plain" ratio="auto" className="product-card__media" />
+              ) : (
+                <div className="mini-fan" aria-hidden="true">
+                  <span className="mini-fan__card mini-fan__card--1" style={{ '--h': 300 }} />
+                  <span className="mini-fan__card mini-fan__card--2" style={{ '--h': 265 }} />
+                  <span className="mini-fan__card mini-fan__card--3" style={{ '--h': 330 }} />
+                </div>
+              )}
             </div>
             <div className="product-card__body">
               <span className="badge badge--novel">Ebook · Original story</span>
               <h2>LLD-Novel</h2>
               <p>
-                A story that began as a roleplay and was rewritten by hand — read with animated text, character
+                A story that began as a roleplay and was carefully rewritten — read with animated text, character
                 cards and art, in a free Reader.
               </p>
               <span className="product-card__cta">

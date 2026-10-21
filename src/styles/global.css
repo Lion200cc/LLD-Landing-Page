@@ -103,7 +103,7 @@ button {
   white-space: nowrap;
 }
 
-section[id] {
+[id] {
   scroll-margin-top: calc(var(--nav-h) + 12px);
 }
 

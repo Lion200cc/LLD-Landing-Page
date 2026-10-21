@@ -30,6 +30,7 @@ export default function Navbar() {
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) setActive(e.target.id);
+          else setActive((cur) => (cur === e.target.id ? null : cur));
         });
       },
       { rootMargin: '-45% 0px -50% 0px' },
