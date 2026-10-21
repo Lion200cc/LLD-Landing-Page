@@ -1,0 +1,58 @@
+/* Design tokens — dark purple fading to black.
+   Change a value here and the whole page follows. */
+:root {
+  /* Base: the page runs from deep purple (top) to black (bottom) */
+  --black: #030106;
+  --bg-0: #07030f;
+  --bg-1: #0d0620;
+  --bg-2: #160a33;
+  --bg-3: #21104a;
+
+  /* Surfaces */
+  --surface: rgba(32, 16, 66, 0.45);
+  --surface-strong: rgba(40, 20, 82, 0.7);
+  --line: rgba(167, 128, 255, 0.18);
+  --line-strong: rgba(167, 128, 255, 0.38);
+
+  /* Text */
+  --text: #f0eafc;
+  --text-dim: #b6a9d3;
+  --text-faint: #7f7399;
+
+  /* Shared purple scale */
+  --violet-600: #6d28d9;
+  --violet-500: #8b5cf6;
+  --violet-400: #a78bfa;
+  --violet-300: #c4b5fd;
+  --magenta: #d946ef;
+
+  /* Per-product accents */
+  --studio-accent: #8b5cf6;
+  --studio-glow: #7dd3fc; /* a cool touch for the "tech" side */
+  --novel-accent: #e0a3ff;
+  --novel-gold: #f0d29a; /* a warm touch for the "literary" side */
+  --novel-rose: #f472b6;
+
+  /* Status colors */
+  --ok: #86efac;
+  --warn: #fcd34d;
+  --soon: #c4b5fd;
+
+  /* Type */
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-studio: 'Space Grotesk Variable', var(--font-body);
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-novel: 'Cormorant Garamond Variable', 'Iowan Old Style', Georgia, serif;
+
+  /* Shape + motion */
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-glow: 0 0 0 1px var(--line), 0 24px 60px -24px rgba(109, 40, 217, 0.55);
+
+  /* Layout */
+  --gutter: clamp(16px, 4vw, 40px);
+  --maxw: 1160px;
+  --nav-h: 68px;
+}
